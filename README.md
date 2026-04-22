@@ -1,31 +1,54 @@
 # mcp-disify
 
-MCP server for detecting disposable email addresses via [Disify API](https://www.disify.com). No authentication required.
+Disify MCP — wraps Disify API (free, no auth)
+
+Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 250+ live data sources.
 
 ## Tools
 
 | Tool | Description |
 |------|-------------|
-| `validate_email` | Check whether an email address is disposable or invalid |
-| `check_domain` | Check whether a domain is associated with disposable email services |
 
-## Quickstart via Pipeworx Gateway
+## Quick Start
 
-Call any tool through the hosted gateway with zero setup:
+Add to your MCP client (Claude Desktop, Cursor, Windsurf, etc.):
 
-```bash
-curl -X POST https://gateway.pipeworx.io/mcp \
-  -H "Content-Type: application/json" \
-  -d '{
-    "jsonrpc": "2.0",
-    "id": 1,
-    "method": "tools/call",
-    "params": {
-      "name": "disify_validate_email",
-      "arguments": { "email": "test@mailinator.com" }
+```json
+{
+  "mcpServers": {
+    "disify": {
+      "url": "https://gateway.pipeworx.io/disify/mcp"
     }
-  }'
+  }
+}
 ```
+
+Or connect to the full Pipeworx gateway for access to all 250+ data sources:
+
+```json
+{
+  "mcpServers": {
+    "pipeworx": {
+      "url": "https://gateway.pipeworx.io/mcp"
+    }
+  }
+}
+```
+
+## Using with ask_pipeworx
+
+Instead of calling tools directly, you can ask questions in plain English:
+
+```
+ask_pipeworx({ question: "your question about Disify data" })
+```
+
+The gateway picks the right tool and fills the arguments automatically.
+
+## More
+
+- [All tools and guides](https://github.com/pipeworx-io/examples)
+- [pipeworx.io](https://pipeworx.io)
 
 ## License
 
