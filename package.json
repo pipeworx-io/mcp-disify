@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-disify",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Disify MCP — wraps the Disify API (anonymous tier + BYO key)",
   "type": "module",
   "main": "src/index.ts",
@@ -26,7 +26,7 @@
     "@cloudflare/workers-types": "^4.20260405.1"
   },
   "pipeworx": {
-    "sourceHash": "v1-7206d9cadc8a4339bd0c40a840601e607e65662ad22aef95a7b47245adfed2fc",
-    "sourceCommit": "5749f83c0ea115fab4c0c0ef04b66b05f2507d67"
+    "sourceHash": "v1-06198b39839e43b010b0313298a098767262fae9bb9a9816969ece0ffa5eda76",
+    "sourceCommit": "29fb434ca65fe0f61191f19c3502f583f5fb99d7"
   }
 }
