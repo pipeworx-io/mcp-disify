@@ -1,0 +1,42 @@
+[
+  {
+    "name": "validate_email",
+    "description": "Verify an email address is properly formatted, has valid DNS records, and isn't disposable or an alias. Returns validation status, a 0-100 confidence score and the signals behind it. Pass your own Disify key as _apiKey — the keyless anonymous quota is shared and usually spent.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string",
+          "description": "The email address to validate."
+        },
+        "_apiKey": {
+          "type": "string",
+          "description": "Optional but recommended: your own Disify API key (BYO — Pipeworx does not supply one). Without it the call uses the anonymous tier, whose daily quota is shared across all Pipeworx callers and is usually exhausted. Get one at disify.com."
+        }
+      },
+      "required": [
+        "email"
+      ]
+    }
+  },
+  {
+    "name": "check_domain",
+    "description": "Check if a domain is associated with disposable or temporary email services. Returns risk assessment, a 0-100 confidence score and the signals behind it. Pass your own Disify key as _apiKey — the keyless anonymous quota is shared and usually spent.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "domain": {
+          "type": "string",
+          "description": "The domain name to check, e.g. \"mailinator.com\"."
+        },
+        "_apiKey": {
+          "type": "string",
+          "description": "Optional but recommended: your own Disify API key (BYO — Pipeworx does not supply one). Without it the call uses the anonymous tier, whose daily quota is shared across all Pipeworx callers and is usually exhausted. Get one at disify.com."
+        }
+      },
+      "required": [
+        "domain"
+      ]
+    }
+  }
+]
