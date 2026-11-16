@@ -1,7 +1,7 @@
 {
   "name": "@pipeworx/mcp-disify",
-  "version": "1.1.1",
-  "description": "Disify MCP — wraps the Disify API (anonymous tier + BYO key)",
+  "version": "1.1.2",
+  "description": "Unofficial Disify MCP — wraps the Disify API (anonymous tier + BYO key)",
   "type": "module",
   "main": "lib/index.js",
   "exports": {
@@ -27,7 +27,7 @@
     "mode": "gateway",
     "slug": "disify",
     "gatewaySlug": "disify",
-    "sourceHash": "v1-b792ae6e09775e1ec953e82f38229140b2bdb54019dce5c885f9f371d4e6ad4f",
-    "sourceCommit": "e707a4bb6209f432984c0a83bf64b3138130db89"
+    "sourceHash": "v1-3cd626d8463cb4c3d07ff6564efcdc271107d0be9ed23ad3ce9bf5c8116dbe1b",
+    "sourceCommit": "874331b0c46b151f9264bd14840631427a7721c1"
   }
 }
